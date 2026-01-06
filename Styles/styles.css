@@ -40,6 +40,9 @@
 header {
     background-color: #FFF8F3;
     padding-top: 50px;
+    background-image: url('../images/developer.png'), url('../images/header_bg.png');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
 }
 
 nav {
@@ -69,4 +72,41 @@ nav .menu li a {
 
 nav .menu li a:hover {
     color: #FD6E0A;
+}
+
+#banner {
+    margin: 46px 38px 0px 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#banner .banner-content {
+    max-width: 600px;
+    height: 500px;
+}
+
+#banner .banner-content h2 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #474747;
+    margin-bottom: 5px;
+    
+}
+
+#banner .banner-content h1 {
+    font-size: 80px;
+    font-weight: bold;
+    color: #181818;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    
+}
+#banner .banner-content p {
+    font-size: 18px;
+    color: #757575;
+    margin-bottom: 30px;
+    line-height: 30px;
+    
 }
