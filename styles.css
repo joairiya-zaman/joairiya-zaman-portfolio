@@ -68,6 +68,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 nav .menu {
@@ -101,6 +102,12 @@ nav .menu li a:hover {
 #banner .banner-content {
     max-width: 600px;
     height: 550px;
+}
+
+#banner .banner-content > div {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 #banner .banner-content h2 {
@@ -144,6 +151,8 @@ nav .menu li a:hover {
 #about .about-container .about-info {
     display: flex;
     justify-content: space-around;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
 .about-info .info-item p {
@@ -161,8 +170,6 @@ nav .menu li a:hover {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    /* text-align: center; */
-    /* background-color: #FFF8F3; */
     padding: 125px 150px;
 }
 
@@ -264,6 +271,7 @@ footer .footer-container {
     margin: 0 auto;
     display: flex;
     gap: 115px;
+    flex-wrap: wrap;
 }
 
 .footer-container .social {
@@ -289,10 +297,179 @@ footer .footer-container {
 
 .footer-container form input[type="text"],
 .footer-container form textarea {
-    width: 460px;
+    width: 100%;
+    max-width: 460px;
     padding: 18px 30px;
     margin-bottom: 24px;
     border: none;
     border-radius: 5px;
     color: #757575;
+}
+
+@media (max-width: 1200px) {
+    nav {
+        width: 90%;
+    }
+
+    #banner {
+        margin: 120px auto 0;
+        padding: 0 20px 60px;
+        justify-content: center;
+    }
+
+    #banner .banner-content h1 {
+        font-size: 64px;
+    }
+
+    #banner .banner-content h2 {
+        font-size: 36px;
+    }
+
+    #about .about-container,
+    #skills .skill-container {
+        padding: 90px 80px;
+    }
+
+    footer .footer-container {
+        width: 90%;
+        gap: 60px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        background-size: 35% auto, auto;
+        background-position: 12px 24px, bottom right;
+        background-image: url("./images/header_bg.png");
+        background-size: auto;
+        background-position: bottom right;
+    }
+
+    nav {
+        width: 92%;
+    }
+
+    nav .menu {
+        gap: 18px;
+    }
+
+    #banner {
+        margin: 80px auto 0;
+        text-align: center;
+    }
+
+    #banner .banner-content {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #banner .banner-content > div {
+        justify-content: center;
+    }
+
+    #banner .banner-content h1 {
+        font-size: 48px;
+    }
+
+    #banner .banner-content h2 {
+        font-size: 28px;
+    }
+
+    #banner .banner-content p {
+        font-size: 16px;
+    }
+
+    #about .about-container,
+    #skills .skill-container {
+        padding: 70px 24px;
+    }
+
+    #about .about-container .about-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills .skill-container .skill-box {
+        flex-direction: column;
+    }
+
+    .skill-box .skill-card {
+        max-width: 100%;
+    }
+
+    #resume .resume-container {
+        width: 90%;
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .resume-card {
+        margin-right: 0;
+    }
+
+    footer {
+        padding: 90px 0;
+    }
+
+    footer .footer-container {
+        gap: 40px;
+    }
+
+    .footer-container form input[type="text"],
+    .footer-container form textarea {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        background-image: url("./images/header_bg.png");
+        background-size: auto;
+        background-position: bottom right;
+    }
+
+    nav {
+        width: 92%;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    nav .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding-right: 140px;
+    }
+
+    nav .menu li:last-child {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    .nav-btn {
+        display: inline-flex;
+    }
+
+    .logo h2 {
+        font-size: 36px;
+    }
+
+    #banner .banner-content h1 {
+        font-size: 36px;
+    }
+
+    #banner .banner-content h2 {
+        font-size: 22px;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .section-heading p {
+        font-size: 16px;
+    }
 }
